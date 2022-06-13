@@ -18,12 +18,21 @@
     background-color: black;
 }
 
+.header h1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    animation-name: h1EnMovimiento;
+    animation-duration: 10s;
+}
+
 .nav {
     grid-area: nav;
     background-color: black;
     margin: 20px;
     padding: 20px;
-
 }
 
 .nav ul {
@@ -46,6 +55,11 @@
     color: red;
 }
 
+.nav li:hover {
+    transform: scale(0.75);
+    transition: 0.5s;
+}
+
 
 .footer {
     grid-area: footer;
@@ -53,7 +67,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
-    background-color: black;
+    background: rgb(12, 12, 13);
+    background: linear-gradient(90deg, rgba(12, 12, 13, 1) 30%, rgba(122, 122, 122, 1) 66%, rgba(0, 0, 0, 0.9220063025210083) 90%);
 }
 
 .footer li {
@@ -62,11 +77,11 @@
     margin: 20px;
 }
 
-.footer ul{
+.footer ul {
     display: flex;
 }
 
-.footer i{
+.footer i {
     color: white;
     font-size: x-large;
 }
@@ -87,7 +102,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     color: white;
-    margin: 50px 500px 50px 50px;
+    margin: 50px 500px 50px 100px;
     font-family: 'Amiri', serif;
     font-family: 'Arvo', serif;
     font-family: 'Tai Heritage Pro', serif;
@@ -98,6 +113,34 @@
     font-size: 6vh;
 }
 
-.main p{
+.main p {
     font-size: larger;
+}
+
+@keyframes h1EnMovimiento {
+    0% {
+        width: 100px;
+    }
+
+    15% {
+        width: 50px;
+    }
+
+    25% {
+        width: 300px;
+    }
+
+    50% {
+        width: 200px;
+        background-color: red;
+    }
+
+    75% {
+        width: 300px;
+    }
+
+    100% {
+        width: 100px;
+        background-color: darkgray;
+    }
 }
