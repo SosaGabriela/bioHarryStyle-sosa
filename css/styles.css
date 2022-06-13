@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header nav nav"
+        "main main main main"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: black;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: black;
+    margin: 20px;
+    padding: 20px;
+
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    color: red;
+}
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background-color: black;
+}
+
+.footer li {
+    color: white;
+    list-style: none;
+    margin: 20px;
+}
+
+.footer ul{
+    display: flex;
+}
+
+.footer i{
+    color: white;
+    font-size: x-large;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://los40puebla.com/wp-content/uploads/2022/02/harry.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.main div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    margin: 50px 500px 50px 50px;
+    font-family: 'Amiri', serif;
+    font-family: 'Arvo', serif;
+    font-family: 'Tai Heritage Pro', serif;
+}
+
+.main h2 {
+    margin-bottom: 10px;
+    font-size: 6vh;
+}
+
+.main p{
+    font-size: larger;
+}
