@@ -43,6 +43,7 @@
 
 .nav li {
     list-style: none;
+    padding: 10px;
 }
 
 .nav a {
@@ -144,3 +145,43 @@
         background-color: darkgray;
     }
 }
+
+@media (max-width: 480px){
+    .container{
+        grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "main main main main"
+        "footer footer footer footer";
+}
+    .nav ul {
+        flex-direction: column
+    }
+
+    .main {
+        background-image: none;
+        background-color: rgb(29, 29, 29);
+    }
+    .main div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 10px 50px 50px 10px;
+        font-family: 'Amiri', serif;
+        font-family: 'Arvo', serif;
+        font-family: 'Tai Heritage Pro', serif;
+    }
+
+    .main p {
+        font-size: medium;
+    }
+
+    .main h2{
+        font-size: 10vh;
+    }
+
+    .mainContacto{
+        background-color: rgb(29, 29, 29);
+        color: white;
+    }
+    }
